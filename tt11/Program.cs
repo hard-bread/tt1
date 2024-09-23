@@ -22,6 +22,8 @@ namespace tt1
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("То заплачет как дитя");
 
+            Console.ResetColor();
+            
             Console.ReadKey();
         }
     }
