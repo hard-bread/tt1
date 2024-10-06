@@ -12,7 +12,6 @@ namespace Домашка3
         {
             Console.Write("Введите 4-значное число: ");
             int number = int.Parse(Console.ReadLine());
-            if (number < 1000 || number > 9999)
             
             Console.WriteLine("Введенное число: " + number);
             int originalNumber = number;
