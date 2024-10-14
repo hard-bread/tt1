@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "строки и символы", "строки и символы.csproj", "{EF3D07B5-5759-494C-B8DF-86523C949006}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF3D07B5-5759-494C-B8DF-86523C949006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3D07B5-5759-494C-B8DF-86523C949006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3D07B5-5759-494C-B8DF-86523C949006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3D07B5-5759-494C-B8DF-86523C949006}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF932A26-69DE-49AA-8C38-32640F97A764}
+	EndGlobalSection
+EndGlobal
