@@ -15,11 +15,8 @@ namespace домашнее7._1
 
             Console.WriteLine("Введите второе целое число n:");
             int n = Convert.ToInt32(Console.ReadLine());
-
-            // Проверяем, является ли только одно из чисел четным
             bool onlyOneEven = (m % 2 == 0) ^ (n % 2 == 0);
 
-            // Выводим результат
             Console.WriteLine(onlyOneEven);
         }
     }
