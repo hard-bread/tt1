@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using System.Reflection.PortableExecutable;
-using Автосалон;
+using РђРІС‚РѕСЃР°Р»РѕРЅ;
 
 namespace SkladTest
 {
@@ -12,7 +12,7 @@ namespace SkladTest
         {
             var first = CreateTestSclad();
             Assert.That(first.Article, Is.EqualTo("23423234"));
-            Assert.That(first.Name, Is.EqualTo("Сок"));
+            Assert.That(first.Name, Is.EqualTo("РЎРѕРє"));
             Assert.That(first.Weight, Is.EqualTo(0.5));
             Assert.That(first.Dimensions, Is.EqualTo((23, 40, 50)));
             Assert.That(first.DateOfReceipt.ToShortDateString(), Is.EqualTo("15.03.2023"));
@@ -27,12 +27,12 @@ namespace SkladTest
             var info = commodity.GetInfo();
 
             Assert.That(info.Length, Is.EqualTo(2));
-            Assert.That(info[0], Is.EqualTo("Артикул:23423234 Название:Сок Цена:150"));
-            Assert.That(info[1], Is.EqualTo("Вес: 0,5 кг, Габариты упаковки: 23x40x50 см, Дата поступления на склад: 15.03.2023, Характеристика товара: Обыкновенный, Особенность складирования: 10."));
+            Assert.That(info[0], Is.EqualTo("РђСЂС‚РёРєСѓР»:23423234 РќР°Р·РІР°РЅРёРµ:РЎРѕРє Р¦РµРЅР°:150"));
+            Assert.That(info[1], Is.EqualTo("Р’РµСЃ: 0,5 РєРі, Р“Р°Р±Р°СЂРёС‚С‹ СѓРїР°РєРѕРІРєРё: 23x40x50 СЃРј, Р”Р°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЃРєР»Р°Рґ: 15.03.2023, РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєР° С‚РѕРІР°СЂР°: РћР±С‹РєРЅРѕРІРµРЅРЅС‹Р№, РћСЃРѕР±РµРЅРЅРѕСЃС‚СЊ СЃРєР»Р°РґРёСЂРѕРІР°РЅРёСЏ: 10."));
         }
         private Commodity CreateTestSclad()
         {
-            return new Commodity("23423234", "Сок", 0.5, (23, 40, 50))
+            return new Commodity("23423234", "РЎРѕРє", 0.5, (23, 40, 50))
             {
                 DateOfReceipt = new DateTime(2023, 3, 15),
                 Price = 150,
