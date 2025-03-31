@@ -1,33 +1,31 @@
 using System.Diagnostics;
 using System.Reflection.PortableExecutable;
 using static Storage.Commodity;
-
 namespace Storage
 {
-    [TestFixture]
-    public class FoodProductTest
+
+    public class StorageCapabilityTest
     {
         [Test]
         public void ConstructorTest()
         {
-            var foodcommodity = GetTestFoodCommodity();
+            var material = GetTestStorageCapability();
 
-            Assert.That(foodcommodity.ExpiryDate, Is.EqualTo(9));
-            Assert.That(foodcommodity.Temperature, Is.EqualTo(10));
+            Assert.That(material.StorageCapability, Is.EqualTo("Р”Р°"));
         }
 
         [Test]
-        public void GetInfo_FullStudent()
+        public void GetInfo_StorageCapability()
         {
-            var foodcommodity = GetTestFoodCommodity();
+            var material = GetTestStorageCapability();
             var lines = new[]
             {
-                "Артикул:23423234 Название:Сок Цена:150",
-                "Вес: 0,5 кг, Габариты упаковки: 23x40x50 см, Дата поступления на склад: 15.03.2023, Характеристика товара: Обыкновенный, Особенность складирования: 10.",
-                "Срок годности: 9 месяцев; Температура хранения: 10°"
+                "РђСЂС‚РёРєСѓР»:23423234 РќР°Р·РІР°РЅРёРµ:РЎРѕРє Р¦РµРЅР°:150",
+                "Р’РµСЃ: 0,5 РєРі, Р“Р°Р±Р°СЂРёС‚С‹ СѓРїР°РєРѕРІРєРё: 23x40x50 СЃРј, Р”Р°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЃРєР»Р°Рґ: 15.03.2023, РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєР° С‚РѕРІР°СЂР°: РћР±С‹РєРЅРѕРІРµРЅРЅС‹Р№, РћСЃРѕР±РµРЅРЅРѕСЃС‚СЊ СЃРєР»Р°РґРёСЂРѕРІР°РЅРёСЏ: 10.",
+                "Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ С…СЂР°РЅРµРЅРёСЏ РЅР° РѕС‚РєСЂС‹С‚РѕРј РІРѕР·РґСѓС…Рµ: Р”Р°"
             };
 
-            var info = foodcommodity.GetInfo();
+            var info = material.GetInfo();
 
             Assert.That(info.Length, Is.EqualTo(3));
 
@@ -35,9 +33,9 @@ namespace Storage
                 Assert.That(info[i], Is.EqualTo(lines[i]));
         }
 
-        private FoodProduct GetTestFoodCommodity()
+        private BuildMaterial GetTestStorageCapability()
         {
-            var food = new FoodProduct(23423234, "Сок", 0.5, (23, 40, 50), new DateTime(2023, 3, 15), 150, CommodityCharacteristic.Ordinary, 10, 9, 10);
+            var food = new BuildMaterial(23423234, "РЎРѕРє", 0.5, (23, 40, 50), new DateTime(2023, 3, 15), 150, CommodityCharacteristic.Ordinary, "Р”Р°");
             food.DateOfReceipt = new DateTime(2023, 3, 15);
             food.Price = 150;
             food.StackingLimit = 10;
