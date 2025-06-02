@@ -11,7 +11,7 @@ namespace Storage
         {
             var material = GetTestStorageCapability();
 
-            Assert.That(material.StorageCapability, Is.EqualTo("Да"));
+            Assert.That(material.StorageCapability, Is.EqualTo("Р”Р°"));
         }
 
         [Test]
@@ -20,9 +20,9 @@ namespace Storage
             var material = GetTestStorageCapability();
             var lines = new[]
             {
-                "Артикул:23423234 Название:Сок Цена:150",
-                "Вес: 0,5 кг, Габариты упаковки: 23x40x50 см, Дата поступления на склад: 15.03.2023, Характеристика товара: Обыкновенный, Особенность складирования: 10.",
-                "Возможность хранения на открытом воздухе: Да"
+                "РђСЂС‚РёРєСѓР»:23423234 РќР°Р·РІР°РЅРёРµ:РЎРѕРє Р¦РµРЅР°:150",
+                "Р’РµСЃ: 0,5 РєРі, Р“Р°Р±Р°СЂРёС‚С‹ СѓРїР°РєРѕРІРєРё: 23x40x50 СЃРј, Р”Р°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЃРєР»Р°Рґ: 15.03.2023, РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєР° С‚РѕРІР°СЂР°: РћР±С‹РєРЅРѕРІРµРЅРЅС‹Р№, РћСЃРѕР±РµРЅРЅРѕСЃС‚СЊ СЃРєР»Р°РґРёСЂРѕРІР°РЅРёСЏ: 10.",
+                "Р’РѕР·РјРѕР¶РЅРѕСЃС‚СЊ С…СЂР°РЅРµРЅРёСЏ РЅР° РѕС‚РєСЂС‹С‚РѕРј РІРѕР·РґСѓС…Рµ: Р”Р°"
             };
 
             var info = material.GetInfo();
@@ -35,7 +35,7 @@ namespace Storage
 
         private BuildMaterial GetTestStorageCapability()
         {
-            var food = new BuildMaterial(23423234, "Сок", 0.5, (23, 40, 50), new DateTime(2023, 3, 15), 150, CommodityCharacteristic.Ordinary, "Да");
+            var food = new BuildMaterial(23423234, "РЎРѕРє", 0.5, (23, 40, 50), new DateTime(2023, 3, 15), 150, CommodityCharacteristic.Ordinary, "Р”Р°");
             food.DateOfReceipt = new DateTime(2023, 3, 15);
             food.Price = 150;
             food.StackingLimit = 10;
